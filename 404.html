@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not found</title>
+  <script>
+    // the old site lived at /TinyFun/, send those links to the same page on picoplayer.net
+    let match = location.pathname.match(/^\/tinyfun(\/.*)?$/i)
+    if (match) location.replace("https://picoplayer.net" + (match[1] || "/") + location.search + location.hash)
+  </script>
+</head>
+<body>
+  <p>Nothing here. Looking for <a href="https://picoplayer.net/">PicoPlayer</a>?</p>
+</body>
+</html>
